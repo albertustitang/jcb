@@ -6,9 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBReportPage {
 
 	protected WebDriver driver;
+	Tools tool = new Tools();
 
 	@FindBy(xpath = "//i[@class='fa fa-expand']")
 	private WebElement expandBtn;
@@ -36,6 +39,9 @@ public class JCBReportPage {
 
 	@FindBy(xpath = "//div[@id='header']/ul/li/div/a")
 	private WebElement btnLogout;
+	
+	@FindBy(xpath = "//h1[@class='page-header']")
+	private WebElement textReportPage;
 
 	public JCBReportPage(WebDriver driver) {
 		this.driver = driver;
@@ -73,23 +79,19 @@ public class JCBReportPage {
 
 	public JCBReportPage clickBtnProcessNewTemplate() {
 		processNewTemplateBtn.click();
+		tool.stopForMoment(1000);
 		return PageFactory.initElements(driver, JCBReportPage.class);
 	}
-
-	public JCBReportPage LogOut() {
-		profile.click();
-		btnLogout.click();
-		return PageFactory.initElements(driver, JCBReportPage.class);
-	}
-
-	public JCBLoginPage gotoLoginPage() {
-		return PageFactory.initElements(driver, JCBLoginPage.class);
-	}
-
+	
 	public JCBReportPage selectDropdownListEntriesByValue(String value) {
 		Select select = new Select(kategoriBtn);
 		select.selectByValue(value);
 		return PageFactory.initElements(driver, JCBReportPage.class);
+	}
+	
+	public WebElement getTextReportPage () {
+		return textReportPage;
+		
 	}
 
 }

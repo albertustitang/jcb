@@ -1,29 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-11T13:16:56 ICT" name="Default suite" finished-at="2022-07-11T13:17:20 ICT" duration-ms="23744">
+  <suite started-at="2022-07-15T00:10:38 ICT" name="Test Modul Completed Administrator" finished-at="2022-07-15T00:12:25 ICT" duration-ms="107092">
     <groups>
     </groups>
-    <test started-at="2022-07-11T13:16:56 ICT" name="Default test" finished-at="2022-07-11T13:17:20 ICT" duration-ms="23744">
-      <class name="com.nexsoft.jcb.test.TestFiturRejectVisitPage">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:16:56 ICT" name="initial" finished-at="2022-07-11T13:17:00 ICT" duration-ms="3744" status="PASS">
+    <test started-at="2022-07-15T00:10:38 ICT" name="Report Test" finished-at="2022-07-15T00:12:25 ICT" duration-ms="107092">
+      <class name="com.nexsoft.jcb.test.TestModulCompleted">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:38 ICT" name="initial" finished-at="2022-07-15T00:10:44 ICT" duration-ms="6070" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:00 ICT" name="reset" finished-at="2022-07-11T13:17:00 ICT" duration-ms="223" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:44 ICT" name="reset" finished-at="2022-07-15T00:10:46 ICT" duration-ms="1896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="edit_data_valid_data_merchant()[pri:1, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:00 ICT" name="edit_data_valid_data_merchant" finished-at="2022-07-11T13:17:14 ICT" duration-ms="13978" status="PASS">
+        <test-method signature="input_kolom_search_by_merchant_name()[pri:1, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:46 ICT" name="input_kolom_search_by_merchant_name" finished-at="2022-07-15T00:10:54 ICT" duration-ms="7609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- edit_data_valid_data_merchant -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:14 ICT" name="logout" finished-at="2022-07-11T13:17:20 ICT" duration-ms="5753" status="PASS">
+        </test-method> <!-- input_kolom_search_by_merchant_name -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:54 ICT" name="logout" finished-at="2022-07-15T00:10:54 ICT" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-      </class> <!-- com.nexsoft.jcb.test.TestFiturRejectVisitPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:54 ICT" name="reset" finished-at="2022-07-15T00:10:56 ICT" duration-ms="2116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_category()[pri:2, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:10:56 ICT" name="input_kolom_search_by_category" finished-at="2022-07-15T00:11:04 ICT" duration-ms="7566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_category -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:04 ICT" name="logout" finished-at="2022-07-15T00:11:05 ICT" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:05 ICT" name="reset" finished-at="2022-07-15T00:11:08 ICT" duration-ms="2426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_address()[pri:3, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:08 ICT" name="input_kolom_search_by_address" finished-at="2022-07-15T00:11:16 ICT" duration-ms="8181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_address -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:16 ICT" name="logout" finished-at="2022-07-15T00:11:16 ICT" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:16 ICT" name="reset" finished-at="2022-07-15T00:11:17 ICT" duration-ms="1369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_PIC_Name()[pri:4, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:17 ICT" name="input_kolom_search_by_PIC_Name" finished-at="2022-07-15T00:11:24 ICT" duration-ms="6898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_PIC_Name -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:24 ICT" name="logout" finished-at="2022-07-15T00:11:25 ICT" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:25 ICT" name="reset" finished-at="2022-07-15T00:11:26 ICT" duration-ms="1242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_PIC_Position()[pri:5, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:26 ICT" name="input_kolom_search_by_PIC_Position" finished-at="2022-07-15T00:11:33 ICT" duration-ms="6951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_PIC_Position -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:33 ICT" name="logout" finished-at="2022-07-15T00:11:33 ICT" duration-ms="582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:33 ICT" name="reset" finished-at="2022-07-15T00:11:35 ICT" duration-ms="1403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_PIC_Phone_Number()[pri:6, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:35 ICT" name="input_kolom_search_by_PIC_Phone_Number" finished-at="2022-07-15T00:11:42 ICT" duration-ms="6898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_PIC_Phone_Number -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:42 ICT" name="logout" finished-at="2022-07-15T00:11:42 ICT" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:42 ICT" name="reset" finished-at="2022-07-15T00:11:43 ICT" duration-ms="1536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="input_kolom_search_by_Merchant_Acc_JCB()[pri:7, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:43 ICT" name="input_kolom_search_by_Merchant_Acc_JCB" finished-at="2022-07-15T00:11:51 ICT" duration-ms="7579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- input_kolom_search_by_Merchant_Acc_JCB -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:51 ICT" name="logout" finished-at="2022-07-15T00:11:51 ICT" duration-ms="359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:51 ICT" name="reset" finished-at="2022-07-15T00:11:53 ICT" duration-ms="1777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="click_View_Photo()[pri:8, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:11:53 ICT" name="click_View_Photo" finished-at="2022-07-15T00:12:02 ICT" duration-ms="8634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_View_Photo -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:02 ICT" name="logout" finished-at="2022-07-15T00:12:02 ICT" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:02 ICT" name="reset" finished-at="2022-07-15T00:12:03 ICT" duration-ms="1439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="click_View_EDC()[pri:9, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:03 ICT" name="click_View_EDC" finished-at="2022-07-15T00:12:12 ICT" duration-ms="8427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_View_EDC -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:12 ICT" name="logout" finished-at="2022-07-15T00:12:12 ICT" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:12 ICT" name="reset" finished-at="2022-07-15T00:12:13 ICT" duration-ms="1296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset -->
+        <test-method signature="click_Return_and_input_notes_return()[pri:10, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:13 ICT" name="click_Return_and_input_notes_return" finished-at="2022-07-15T00:12:22 ICT" duration-ms="8918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_Return_and_input_notes_return -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:22 ICT" name="logout" finished-at="2022-07-15T00:12:23 ICT" duration-ms="436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.nexsoft.jcb.test.TestModulCompleted@7f485fda]" started-at="2022-07-15T00:12:23 ICT" name="closeDriver" finished-at="2022-07-15T00:12:25 ICT" duration-ms="2335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulCompleted -->
+    </test> <!-- Report Test -->
+  </suite> <!-- Test Modul Completed Administrator -->
 </testng-results>

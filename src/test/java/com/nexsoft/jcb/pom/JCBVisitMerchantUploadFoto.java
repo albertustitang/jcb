@@ -46,7 +46,9 @@ public class JCBVisitMerchantUploadFoto {
 	@FindBy(xpath = "//strong[normalize-space()='Success!']")
 	private WebElement textSuccessUploadPhoto;
 
-	@FindBy(xpath = "//p[@id='error']")
+//	@FindBy(xpath = "//p[@id='error']")
+//	private WebElement textErrorUploadPhoto;
+	@FindBy(xpath = "//div[@id='message']")
 	private WebElement textErrorUploadPhoto;
 
 	@FindBy(xpath = "//button[normalize-space()='Cancel']")
@@ -86,6 +88,7 @@ public class JCBVisitMerchantUploadFoto {
 		tools.stopForMoment();
 		chooseFileBtn.sendKeys(filepath);
 		saveBtn.click();
+		tools.stopForMoment(5000);
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);
 	}
 
@@ -95,6 +98,8 @@ public class JCBVisitMerchantUploadFoto {
 		tools.stopForMoment();
 		chooseFileBtn.sendKeys(filepath);
 		saveBtn.click();
+		tools.stopForMoment(5000);
+
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);
 	}
 
@@ -104,6 +109,8 @@ public class JCBVisitMerchantUploadFoto {
 		tools.stopForMoment();
 		chooseFileBtn.sendKeys(filepath);
 		saveBtn.click();
+		tools.stopForMoment(5000);
+
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);
 	}
 
@@ -122,6 +129,8 @@ public class JCBVisitMerchantUploadFoto {
 		tools.stopForMoment();
 		chooseFileBtn.sendKeys(filepath);
 		saveBtn.click();
+		tools.stopForMoment(5000);
+
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);
 	}
 
@@ -140,6 +149,7 @@ public class JCBVisitMerchantUploadFoto {
 		tools.stopForMoment();
 		chooseFileBtn.sendKeys(filepath);
 		saveBtn.click();
+		tools.stopForMoment(5000);
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);
 	}
 

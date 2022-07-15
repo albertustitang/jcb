@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.nexsoft.jcb.other.Tools;
-
 public class JCBNewDataVisitPage {
 	protected WebDriver driver;
 
@@ -117,8 +115,6 @@ public class JCBNewDataVisitPage {
 	@FindBy(xpath = "//select[@name='op_open_close']")
 	private WebElement checkBoxOpenCloseVM;
 
-	// label[@for='cssCheckbox1']
-	// *[@id="cssCheckbox1"]
 	@FindBy(xpath = "//label[@for='cssCheckbox1']")
 	private WebElement billHolderBTN;
 
@@ -142,6 +138,10 @@ public class JCBNewDataVisitPage {
 
 	public JCBNewDataVisitPage(WebDriver driver) {
 		this.driver = driver;
+	}
+
+	public WebElement getTextNotifAddDataSuccess() {
+		return textUploadSuccessAddTID;
 	}
 
 	public WebElement getTextNotifAddTIDSuccess() {
@@ -368,10 +368,7 @@ public class JCBNewDataVisitPage {
 	}
 
 	public String checkBoxReservedSign() {
-		
-		
-		
-		
+
 		if (driver.findElement(By.xpath("//*[@id=\"cssCheckbox4\"]")).getAttribute("checked") == null) {
 			reserverdSignBtn.click();
 		}
@@ -383,9 +380,8 @@ public class JCBNewDataVisitPage {
 				"att check: " + driver.findElement(By.xpath("//*[@id=\"cssCheckbox4\"]")).getAttribute("checked"));
 		return driver.findElement(By.xpath("//*[@id=\"cssCheckbox4\"]")).getAttribute("checked");
 
-
 	}
-	
+
 	public String selectDropdownListVMStickerEntriesByValue(String value) {
 		Select select = new Select(checkBoxStickerVM);
 		select.selectByValue(value);
@@ -404,7 +400,7 @@ public class JCBNewDataVisitPage {
 		select.selectByValue(value);
 		return select.getFirstSelectedOption().getText();
 	}
-	
+
 	public JCBVisitMerchantUploadFoto clickBtnSubmit() {
 		submitBtn.click();
 		return PageFactory.initElements(driver, JCBVisitMerchantUploadFoto.class);

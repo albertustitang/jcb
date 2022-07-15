@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBHomePage {
 	protected WebDriver driver;
+	protected Tools tool = new Tools();
 
 	@FindBy(xpath = "//span[normalize-space()='Dashboard']")
 	private WebElement menuDashboard;
@@ -134,5 +137,28 @@ public class JCBHomePage {
 		menuWorklistReject.click();
 		return PageFactory.initElements(driver, JCBRejectPage.class);
 	}
+	
+	public JCBAddNewDataPage clickAndGotoMenuAddNewData() {
+		menuWorklistAddNewData.click();
+		return PageFactory.initElements(driver, JCBAddNewDataPage.class);
+	}
+	
+	public JCBRejectPage clickAndGotoMenuCompleted() {
+		menuCompleted.click();
+		return PageFactory.initElements(driver, JCBRejectPage.class);
+	}
+	
+	public JCBCompletedPage clickAndGoToCompleted() {
+		menuCompleted.click();
+		tool.stopForMoment(2000);
+		return PageFactory.initElements(driver, JCBCompletedPage.class);
+	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
+	
+	
 
 }

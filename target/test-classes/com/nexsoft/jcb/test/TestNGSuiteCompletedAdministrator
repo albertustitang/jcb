@@ -1,0 +1,16 @@
+<?ml version="1.0" encoding="UTF-8"?>
+
+<suite name = "Test Modul Completed Administrator">
+
+<test name = "Report Test">
+
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulCompleted"></class>
+
+
+
+</classes>
+
+</test>
+
+</suite>

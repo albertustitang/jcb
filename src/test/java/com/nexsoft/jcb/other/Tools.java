@@ -15,6 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 //import io.appium.java_client.TouchAction;
 //import io.appium.java_client.android.AndroidDriver;
@@ -55,14 +56,17 @@ public class Tools {
 	public String screenShoot(WebDriver driver) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String waktu = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		String namaFile = "C:\\Antoni\\selenium\\TestNG\\screenshoot\\Error_" + waktu + ".PNG";
+		String namaFile = "D:\\Bootcamp\\jcb\\Screenshot\\Error_" + waktu + ".PNG";
 		File screenshoot = new File(namaFile);
 		try {
 			FileUtils.copyFile(srcFile, screenshoot);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		String photoLog = "<img src='file://" + namaFile + "'height=\"350\" width=\"792\"/>";
+		Reporter.log(photoLog);
 		return namaFile;
+		
 	}
 	
 	//Android tools #########################################################

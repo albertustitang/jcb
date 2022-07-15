@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Modul Worklist Administrator]">
+  <test thread-count="5" name="Worklist Test(failed)">
+    <classes>
+      <class name="com.nexsoft.jcb.test.TestFiturNewDataVisitPage">
+        <methods>
+          <include name="logout"/>
+          <include name="initial"/>
+          <include name="edit_data_invalid_data_merchant"/>
+          <include name="closeDriver"/>
+          <include name="reset"/>
+        </methods>
+      </class> <!-- com.nexsoft.jcb.test.TestFiturNewDataVisitPage -->
+      <class name="com.nexsoft.jcb.test.TestFiturRejectVisitPage">
+        <methods>
+          <include name="logout"/>
+          <include name="closeDriver"/>
+          <include name="initial"/>
+          <include name="reset"/>
+          <include name="edit_data_invalid_data_merchant"/>
+        </methods>
+      </class> <!-- com.nexsoft.jcb.test.TestFiturRejectVisitPage -->
+      <class name="com.nexsoft.jcb.test.TestFiturReturnVisitPage">
+        <methods>
+          <include name="reset"/>
+          <include name="logout"/>
+          <include name="closeDriver"/>
+          <include name="edit_data_invalid_data_merchant"/>
+          <include name="initial"/>
+        </methods>
+      </class> <!-- com.nexsoft.jcb.test.TestFiturReturnVisitPage -->
+      <class name="com.nexsoft.jcb.test.TestFiturAddNewDataPage">
+        <methods>
+          <include name="initial"/>
+          <include name="closeDriver"/>
+          <include name="logout"/>
+          <include name="add_New_Data_with_invalid_data1"/>
+          <include name="reset"/>
+          <include name="add_New_Data_with_invalid_data2"/>
+        </methods>
+      </class> <!-- com.nexsoft.jcb.test.TestFiturAddNewDataPage -->
+    </classes>
+  </test> <!-- Worklist Test(failed) -->
+</suite> <!-- Failed suite [Test Modul Worklist Administrator] -->

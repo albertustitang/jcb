@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -45,11 +46,17 @@ public class TestFiturReturnOtherCondition {
 		;
 
 	}
+	
+	@AfterClass
+	public void closeDriver() {
+		tools.stopForMoment(2000);
+		driver.close();
+	}
 
 	@Test(priority = 1)
 	public void selectVisitStatusWithoutInputOtherStatus() {
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -72,7 +79,7 @@ public class TestFiturReturnOtherCondition {
 	@Test(priority = 2)
 	public void selectVisitStatusWithInputOtherStatus() {
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -87,6 +94,7 @@ public class TestFiturReturnOtherCondition {
 		tools.stopForMoment();
 		returnOtherCon.inputOtherVisitStatus("Test123");
 		returnOtherCon.clickBtnSubmit();
+		tools.stopForMoment();
 
 		boolean isVisitUpdateSuccessDisplayed = returnPage.getTextSuccessUpdateVisitStatus().isDisplayed();
 		assertTrue(isVisitUpdateSuccessDisplayed);

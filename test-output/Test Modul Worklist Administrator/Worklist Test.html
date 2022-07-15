@@ -1,0 +1,650 @@
+<html>
+<head>
+<title>TestNG:  Worklist Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Worklist Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>48/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 14 23:09:52 ICT 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1871 seconds (1871380 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data1()'><b>add_New_Data_with_invalid_data1</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage<br/>
+<a href="#Output-1411119464" onClick='toggleBox("Output-1411119464", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1411119464" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1411119464">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231104.PNG'height="350" width="792"/><br/>
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231105.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Seharusnya data tidak berhasil disimpan,karena data inputan tidak valid(tidak ada validasi untuk field input Merchant Name) expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data1(TestFiturAddNewDataPage.java:285)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1411119464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1411119464'><pre>java.lang.AssertionError: Seharusnya data tidak berhasil disimpan,karena data inputan tidak valid(tidak ada validasi untuk field input Merchant Name) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data1(TestFiturAddNewDataPage.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.edit_data_invalid_data_merchant()'><b>edit_data_invalid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-931026746" onClick='toggleBox("Output-931026746", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-931026746" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-931026746">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231253.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestFiturNewDataVisitPage.edit_data_invalid_data_merchant(TestFiturNewDataVisitPage.java:181)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace931026746", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace931026746'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.nexsoft.jcb.test.TestFiturNewDataVisitPage.edit_data_invalid_data_merchant(TestFiturNewDataVisitPage.java:181)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.edit_data_invalid_data_merchant()'><b>edit_data_invalid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage<br/>
+<a href="#Output-387201170" onClick='toggleBox("Output-387201170", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-387201170" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-387201170">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_233254.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestFiturRejectVisitPage.edit_data_invalid_data_merchant(TestFiturRejectVisitPage.java:178)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace387201170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace387201170'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.nexsoft.jcb.test.TestFiturRejectVisitPage.edit_data_invalid_data_merchant(TestFiturRejectVisitPage.java:178)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data2()'><b>add_New_Data_with_invalid_data2</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage<br/>
+<a href="#Output-1407009494" onClick='toggleBox("Output-1407009494", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1407009494" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1407009494">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231117.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Seharusnya data tidak berhasil disimpan,karena data inputan tidak valid(tidak ada validasi untuk field input PIC dan No Telp PIC) expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data2(TestFiturAddNewDataPage.java:331)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1407009494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1407009494'><pre>java.lang.AssertionError: Seharusnya data tidak berhasil disimpan,karena data inputan tidak valid(tidak ada validasi untuk field input PIC dan No Telp PIC) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_invalid_data2(TestFiturAddNewDataPage.java:331)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.edit_data_invalid_data_merchant()'><b>edit_data_invalid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-1768974462" onClick='toggleBox("Output-1768974462", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1768974462" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1768974462">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232245.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestFiturReturnVisitPage.edit_data_invalid_data_merchant(TestFiturReturnVisitPage.java:179)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1768974462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1768974462'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.nexsoft.jcb.test.TestFiturReturnVisitPage.edit_data_invalid_data_merchant(TestFiturReturnVisitPage.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectOtherCondition.selectVisitStatusWithInputOtherStatus()'><b>selectVisitStatusWithInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectOtherCondition</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectOtherCondition@6c284af</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReject.cek_fitur_filter_reject()'><b>cek_fitur_filter_reject</b><br>Test class: com.nexsoft.jcb.test.TestFiturReject</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestFiturReject@6e9a5ed8</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.add_TID_valid_data()'><b>add_TID_valid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage</td>
+<td></td>
+<td>53</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectOtherCondition.selectVisitStatusWithoutInputOtherStatus()'><b>selectVisitStatusWithoutInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectOtherCondition</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectOtherCondition@6c284af</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.edit_data_blank_data_merchant()'><b>edit_data_blank_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-372630073" onClick='toggleBox("Output-372630073", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-372630073" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-372630073">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232226.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.add_TID_invalid_data_file_pdf()'><b>add_TID_invalid_data_file_pdf</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-1504325562" onClick='toggleBox("Output-1504325562", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1504325562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1504325562">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231532.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewData.cek_fitur_filter_newData()'><b>cek_fitur_filter_newData</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewData</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestFiturNewData@1caa0244</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewData.cek_fitur_search_newData()'><b>cek_fitur_search_newData</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewData</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestFiturNewData@1caa0244</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.edit_data_blank_data_merchant()'><b>edit_data_blank_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReject.cek_fitur_search_reject()'><b>cek_fitur_search_reject</b><br>Test class: com.nexsoft.jcb.test.TestFiturReject</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestFiturReject@6e9a5ed8</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.collateral_choice()'><b>collateral_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.add_TID_invalid_data_file_xlsx()'><b>add_TID_invalid_data_file_xlsx</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-1949995666" onClick='toggleBox("Output-1949995666", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1949995666" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1949995666">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232449.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.add_TID_invalid_data_file_pdf()'><b>add_TID_invalid_data_file_pdf</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>31</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.add_TID_invalid_data_file_xlsx()'><b>add_TID_invalid_data_file_xlsx</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>21</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_valid_data4()'><b>add_New_Data_with_valid_data4</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.add_TID_valid_data()'><b>add_TID_valid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>55</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.add_TID_invalid_data_size_file()'><b>add_TID_invalid_data_size_file</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>28</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.add_TID_valid_data()'><b>add_TID_valid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>48</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.collateral_choice()'><b>collateral_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.add_TID_invalid_data_file_xlsx()'><b>add_TID_invalid_data_file_xlsx</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-763937215" onClick='toggleBox("Output-763937215", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-763937215" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-763937215">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231453.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.upload_photo_visit_merchant_invalid_data()'><b>upload_photo_visit_merchant_invalid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-1994710867" onClick='toggleBox("Output-1994710867", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1994710867" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1994710867">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232027.PNG'height="350" width="792"/><br/>
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232027.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>137</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnOtherCondition.selectVisitStatusWithoutInputOtherStatus()'><b>selectVisitStatusWithoutInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnOtherCondition</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnOtherCondition@268f106e</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.gimmick_choice()'><b>gimmick_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.upload_photo_visit_merchant()'><b>upload_photo_visit_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>104</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.edit_data_valid_data_merchant()'><b>edit_data_valid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>15</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.upload_photo_visit_merchant_invalid_data()'><b>upload_photo_visit_merchant_invalid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-1776885547" onClick='toggleBox("Output-1776885547", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1776885547" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1776885547">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_233036.PNG'height="350" width="792"/><br/>
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_233036.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>137</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.upload_photo_visit_merchant()'><b>upload_photo_visit_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>110</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.collateral_choice()'><b>collateral_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataOtherCondition.selectVisitStatusWithInputOtherStatus()'><b>selectVisitStatusWithInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataOtherCondition</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataOtherCondition@7ce69770</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.add_TID_invalid_data_size_file()'><b>add_TID_invalid_data_size_file</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-1911551651" onClick='toggleBox("Output-1911551651", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1911551651" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1911551651">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231425.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.upload_photo_visit_merchant()'><b>upload_photo_visit_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage</td>
+<td></td>
+<td>112</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.add_TID_invalid_data_file_pdf()'><b>add_TID_invalid_data_file_pdf</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-808105598" onClick='toggleBox("Output-808105598", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-808105598" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-808105598">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232527.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_valid_data3()'><b>add_New_Data_with_valid_data3</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.edit_data_blank_data_merchant()'><b>edit_data_blank_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage<br/>
+<a href="#Output-479372617" onClick='toggleBox("Output-479372617", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-479372617" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-479372617">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_231233.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_valid_data2()'><b>add_New_Data_with_valid_data2</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.V_M_Amex__CUP_choice()'><b>V_M_Amex__CUP_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.gimmick_choice()'><b>gimmick_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturn.cek_fitur_filter_return()'><b>cek_fitur_filter_return</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturn</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestFiturReturn@1750fbeb</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataOtherCondition.selectVisitStatusWithoutInputOtherStatus()'><b>selectVisitStatusWithoutInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataOtherCondition</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataOtherCondition@7ce69770</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.add_TID_invalid_data_size_file()'><b>add_TID_invalid_data_size_file</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage<br/>
+<a href="#Output-1903221272" onClick='toggleBox("Output-1903221272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1903221272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1903221272">
+<img src='file://D:\Bootcamp\jcb\Screenshot\Error_20220714_232421.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td></td>
+<td>29</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturAddNewDataPage.add_New_Data_with_valid_data1()'><b>add_New_Data_with_valid_data1</b><br>Test class: com.nexsoft.jcb.test.TestFiturAddNewDataPage</td>
+<td></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestFiturAddNewDataPage@353352b6</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.edit_data_valid_data_merchant()'><b>edit_data_valid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.V_M_Amex__CUP_choice()'><b>V_M_Amex__CUP_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturNewDataVisitPage.edit_data_valid_data_merchant()'><b>edit_data_valid_data_merchant</b><br>Test class: com.nexsoft.jcb.test.TestFiturNewDataVisitPage</td>
+<td></td>
+<td>15</td>
+<td>com.nexsoft.jcb.test.TestFiturNewDataVisitPage@7ce026d3</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnOtherCondition.selectVisitStatusWithInputOtherStatus()'><b>selectVisitStatusWithInputOtherStatus</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnOtherCondition</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnOtherCondition@268f106e</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturRejectVisitPage.upload_photo_visit_merchant_invalid_data()'><b>upload_photo_visit_merchant_invalid_data</b><br>Test class: com.nexsoft.jcb.test.TestFiturRejectVisitPage</td>
+<td></td>
+<td>131</td>
+<td>com.nexsoft.jcb.test.TestFiturRejectVisitPage@7e057f43</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturnVisitPage.gimmick_choice()'><b>gimmick_choice</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturnVisitPage</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestFiturReturnVisitPage@5b247367</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestFiturReturn.cek_fitur_search_return()'><b>cek_fitur_search_return</b><br>Test class: com.nexsoft.jcb.test.TestFiturReturn</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestFiturReturn@1750fbeb</td></tr>
+</table><p>
+</body>
+</html>

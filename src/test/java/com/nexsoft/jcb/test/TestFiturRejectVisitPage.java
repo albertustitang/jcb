@@ -3,10 +3,15 @@ package com.nexsoft.jcb.test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -48,12 +53,18 @@ public class TestFiturRejectVisitPage {
 		;
 
 	}
+	
+	@AfterClass
+	public void closeDriver() {
+		tools.stopForMoment(2000);
+		driver.close();
+	}
 
 	@Test(priority = 1)
 	public void edit_data_valid_data_merchant() {
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -88,17 +99,15 @@ public class TestFiturRejectVisitPage {
 		assertEquals("Kasir", resultEditPICPos);
 		assertEquals("2", resultMerchAcc);
 
-//		tools.stopForMoment(1000);
-//		newDataVis.LogOut();
-//		newDataVis.gotoLoginPage();
+
 
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void edit_data_blank_data_merchant() {
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -130,19 +139,17 @@ public class TestFiturRejectVisitPage {
 		tools.stopForMoment(1000);
 		assertTrue(isPICReqDisplayed && isNoTelpPICReqDisplayed);
 
-//		newDataVis.LogOut();
-//		newDataVis.gotoLoginPage();
 
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3)
 	public void edit_data_invalid_data_merchant() {
 		String inputPICName = "0856234";
 		String inputNoTelpPIC = "Bambang";
 		String inputPICPos = "Kasir";
 		String inputMerchAcc = "2";
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -167,7 +174,7 @@ public class TestFiturRejectVisitPage {
 		tools.stopForMoment(2000);
 
 		boolean isDisplayed = returnVis.getTextNotifEditSuccess().isDisplayed();
-
+		tools.screenShoot(driver);
 		assertTrue(!isDisplayed);
 
 	}
@@ -183,7 +190,7 @@ public class TestFiturRejectVisitPage {
 		String inputFile = "C:\\Users\\NEXSOFT\\Downloads\\kuda.png";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -210,8 +217,9 @@ public class TestFiturRejectVisitPage {
 
 		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//button[@id='btnSave']")));
 		returnVis.clickBtnSaveAddTID();
-		tools.stopForMoment();
+		tools.stopForMoment(25000);
 		tools.scrollVerticalWindows(driver, -1000);
+		tools.stopForMoment();
 
 		boolean isDisplayed = returnVis.getTextNotifAddTIDSuccess().isDisplayed();
 
@@ -219,7 +227,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5)
 	public void add_TID_invalid_data_size_file() {
 
 		String inputBank = "BRI";
@@ -227,10 +235,10 @@ public class TestFiturRejectVisitPage {
 		String inputTID = "111111";
 		String inputJCB = "2";
 		String inputEDC = "Broken EDC";
-		String inputFile = "C:\\Users\\NEXSOFT\\Downloads\\bigFoto.jpg";
+		String inputFile = "C:\\Users\\NEXSOFT\\Downloads\\7Mb.jpg";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -256,9 +264,12 @@ public class TestFiturRejectVisitPage {
 		returnVis.clickBtnChooseFile(inputFile);
 		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//button[@id='btnSave']")));
 		returnVis.clickBtnSaveAddTID();
-		tools.stopForMoment(20000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Upload error: The file you are attempting to uploa')]")));
+		tools.stopForMoment(2000);
 		boolean isDisplayed = returnVis.getTextErrorUploadTIDFoto().isDisplayed();
-
+		
 		assertTrue(isDisplayed);
 		tools.stopForMoment(2000);
 
@@ -266,7 +277,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6)
 	public void add_TID_invalid_data_file_xlsx() {
 
 		String inputBank = "BCA";
@@ -277,7 +288,7 @@ public class TestFiturRejectVisitPage {
 		String inputFile = "C:\\Users\\NEXSOFT\\Downloads\\nexSOFT SQA.xlsx";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -303,9 +314,11 @@ public class TestFiturRejectVisitPage {
 		returnVis.clickBtnChooseFile(inputFile);
 		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//button[@id='btnSave']")));
 		returnVis.clickBtnSaveAddTID();
-		tools.stopForMoment(20000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='form_edc']/div[2]/div[7]/div/span")));
+		tools.stopForMoment(2000);
 		boolean isDisplayed = returnVis.getTextErrorUploadTID().isDisplayed();
-
+		
 		assertTrue(isDisplayed);
 		tools.stopForMoment(2000);
 
@@ -313,7 +326,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 7)
 	public void add_TID_invalid_data_file_pdf() {
 
 		String inputBank = "CIMB Niaga";
@@ -324,9 +337,9 @@ public class TestFiturRejectVisitPage {
 		String inputFile = "C:\\Users\\NEXSOFT\\Downloads\\JMeter.pdf";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
-
+		
 		home.clickMenuWorklist();
 		tools.stopForMoment(1000);
 		JCBRejectPage rejectPage = home.clickAndGotoMenuReject();
@@ -350,7 +363,11 @@ public class TestFiturRejectVisitPage {
 		returnVis.clickBtnChooseFile(inputFile);
 		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//button[@id='btnSave']")));
 		returnVis.clickBtnSaveAddTID();
-		tools.stopForMoment(20000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='form_edc']/div[2]/div[7]/div/span")));
+		tools.stopForMoment(2000);
+		
 		boolean isDisplayed = returnVis.getTextErrorUploadTID().isDisplayed();
 
 		assertTrue(isDisplayed);
@@ -360,7 +377,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void collateral_choice() {
 
 		String inputSticker = "None";
@@ -369,7 +386,7 @@ public class TestFiturRejectVisitPage {
 		String inputCardHolder = "None";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -396,7 +413,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 9)
 	public void V_M_Amex__CUP_choice() {
 
 		String inputSticker = "Had";
@@ -404,7 +421,7 @@ public class TestFiturRejectVisitPage {
 		String inputOpenClose = "Had";
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -429,11 +446,11 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void gimmick_choice() {
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -471,7 +488,7 @@ public class TestFiturRejectVisitPage {
 	public void submit_all() {
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		JCBHomePage home = login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
+		JCBHomePage home = login.inputFieldUsername("admindika2").inputFieldPassword("d1k4@passw0rd").clickBtnLogin()
 				.gotoHomePage();
 
 		home.clickMenuWorklist();
@@ -544,7 +561,7 @@ public class TestFiturRejectVisitPage {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 11)
 	public void upload_photo_visit_merchant() {
 		submit_all();
 
@@ -592,10 +609,11 @@ public class TestFiturRejectVisitPage {
 				&& uploadPhotoCollJCB1BeforeIsSuccess && uploadPhotoCollJCB1AfterIsSuccess
 				&& uploadPhotoCollJCB2BeforeIsSuccess && uploadPhotoCollJCB2AfterIsSuccess
 				&& uploadFotoCollOtherPrincipalBtnIsSuccess && clickFinishBtnIsSuccess);
-
+		
+		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Logout']")));
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 12)
 	public void upload_photo_visit_merchant_invalid_data() {
 		submit_all();
 
@@ -659,7 +677,7 @@ public class TestFiturRejectVisitPage {
 		try {
 			uploadFoto.getBtnFinish().isDisplayed();
 			clickFinishBtnIsDisplayed = true;
-			System.out.println("gak error");
+			System.out.println("Tidak error");
 		} catch(Exception e) {
 			clickFinishBtnIsDisplayed = false;
 			System.out.println("error");
@@ -669,7 +687,8 @@ public class TestFiturRejectVisitPage {
 		assertTrue(uploadPhotoMerchantFailed && uploadFotoSemuaStrukEDCIsFailed
 				&& uploadPhotoCollJCB1BeforeIsFailed && uploadPhotoCollJCB1AfterIsFailed
 				&& uploadPhotoCollJCB2BeforeIsFailed && uploadPhotoCollJCB2AfterIsFailed
-				&& uploadFotoCollOtherPrincipalBtnIsFailed && !clickFinishBtnIsDisplayed);
-
+				&& uploadFotoCollOtherPrincipalBtnIsFailed && clickFinishBtnIsDisplayed);
+		
+		tools.scrollByFindElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Logout']")));
 	}
 }

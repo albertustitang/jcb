@@ -1,0 +1,25 @@
+<?ml version="1.0" encoding="UTF-8"?>
+
+<suite name = "Test Modul Worklist Administrator">
+
+<test name = "Worklist Test">
+
+<classes>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewData"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturn"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReject"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPage"></class>
+
+
+</classes>
+
+</test>
+
+</suite>

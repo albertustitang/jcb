@@ -1,0 +1,25 @@
+<?ml version="1.0" encoding="UTF-8"?>
+
+<suite name = "Test Modul Worklist Surveyor">
+
+<test name = "Worklist Test">
+
+<classes>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPageSurveyor"></class>
+
+
+</classes>
+
+</test>
+
+</suite>
